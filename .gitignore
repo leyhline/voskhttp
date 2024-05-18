@@ -1,15 +1,10 @@
-models/
-voskhttp/vosk_cffi.py
-voskhttp/*.dll
-voskhttp/*.so
+# Do not include models. Get them from the vosk website instead.
+voskhttp/models/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
 *$py.class
-
-# C extensions
-*.so
 
 # Distribution / packaging
 .Python

@@ -9,6 +9,7 @@ authors = [
     { name = "Thomas Leyh", email = "thomas.leyh@mailbox.org" },
 ]
 description = "Just a very simple HTTP Server wrapper around vosk-api"
+readme = "README.md"
 license = { file = "LICENSE" }
 requires-python = ">=3.9"
 dependencies = ["cffi>=1.0"]
@@ -27,3 +28,9 @@ Issues = "https://github.com/leyhline/voskhttp/issues"
 
 [project.scripts]
 voskhttp = "server:run"
+
+[tool.setuptools.packages.find]
+include = ["voskhttp", "voskhttp.models"]
+
+[tool.setuptools.package-data]
+voskhttp = ["*.dll", "*.so"]
