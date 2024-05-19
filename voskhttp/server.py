@@ -194,7 +194,11 @@ class VoskServer(HTTPServer):
 
     model = None
 
-    def __init__(self):
+    def __init__(self, hostname: str = None, port: int = None):
+        if hostname is not None:
+            self.hostname = hostname
+        if port is not None:
+            self.port = port
         ja_model_path = Path(__file__).parent / "models" / JA_MODEL_FOLDER
         self.model = Model(ja_model_path)
 
@@ -208,8 +212,8 @@ class VoskServer(HTTPServer):
         super().serve_forever(*args, **kwargs)
 
 
-def run():
-    server = VoskServer()
+def run(hostname: str = None, port: int = None):
+    server = VoskServer(hostname, port)
     try:
         server.serve_forever()
     except KeyboardInterrupt:

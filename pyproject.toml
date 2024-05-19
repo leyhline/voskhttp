@@ -27,7 +27,7 @@ Homepage = "https://github.com/leyhline/voskhttp"
 Issues = "https://github.com/leyhline/voskhttp/issues"
 
 [project.scripts]
-voskhttp = "server:run"
+voskhttp = "voskhttp:run"
 
 [tool.setuptools.packages.find]
 include = ["voskhttp", "voskhttp.models"]
