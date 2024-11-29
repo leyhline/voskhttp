@@ -211,6 +211,10 @@ class VoskServer(HTTPServer):
         print(f"Starting server on {self.hostname}:{self.port}")
         super().serve_forever(*args, **kwargs)
 
+    def server_close(self, *args, **kwargs):
+        print("Stopping server")
+        super().server_close(*args, **kwargs)
+
 
 def run(hostname: str = None, port: int = None):
     server = VoskServer(hostname, port)

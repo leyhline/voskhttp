@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "voskhttp"
-version = "1.0.0"
+version = "1.0.1"
 authors = [
     { name = "Thomas Leyh", email = "thomas.leyh@mailbox.org" },
 ]
@@ -25,9 +25,6 @@ classifiers = [
 [project.urls]
 Homepage = "https://github.com/leyhline/voskhttp"
 Issues = "https://github.com/leyhline/voskhttp/issues"
-
-[project.scripts]
-voskhttp = "voskhttp:run"
 
 [tool.setuptools.packages.find]
 include = ["voskhttp", "voskhttp.models"]
